@@ -1,40 +1,40 @@
 # This is an auto-generated file. DO NOT EDIT
 class Kuberlr < Formula
-    desc "Kuberlr - A tool that simplifies the management of multiple versions of kubectl."
-    baseurl = "https://github.com/flavio/kuberlr/releases/download"
-    version "0.4.2"
+  desc "Kuberlr - A tool that simplifies the management of multiple versions of kubectl."
+  baseurl = "https://github.com/flavio/kuberlr/releases/download"
+  version "0.4.4"
 
-    livecheck do
-      url :stable
-      regex(/^v?(\d+(?:\.\d+)+)$/i)
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
+
+  on_macos do
+    on_arm do
+      kernel = "darwin"
+      sha256 "98ea17f30a62f7759bfb64179bc06dce8a9b722fb32b8689b89cbae3a30bf634"
+      arch = "arm64"
+      url baseurl + "/v0.4.4/" + "kuberlr_0.4.4_" + kernel + "_" + arch + ".tar.gz"
     end
-
-    on_macos do
-      on_arm do
-        kernel = "darwin"
-        sha256 "1b5935ce85b182822d362953c0526b2611f108a563d106071db42ed4d116f8e4"
-        arch = "arm64"
-        url baseurl + "/v0.4.2/" + "kuberlr_0.4.2_" + kernel + "_" + arch + ".tar.gz"
-      end
-      on_intel do
-        kernel = "darwin"
-        sha256 "171a81dc391599f186a0bb367c17f4972ec802e9ac20b1441b9552d72120c34c"
-        arch = "amd64"
-        url baseurl + "/v0.4.2/" + "kuberlr_0.4.2_" + kernel + "_" + arch + ".tar.gz"
-      end
-    end
-
-    on_linux do
-      kernel = "linux"
-      sha256 "ad7c52733e4cdf57d01d64ab36c870e5074a12b1a580ecb77c72e467aeef599b"
+    on_intel do
+      kernel = "darwin"
+      sha256 "16b5a395872d0ceae07ec6f3f88668e08fbd0fd4cf68404896c0a21fc7c0f62e"
       arch = "amd64"
-      url baseurl + "/v0.4.2/" + "kuberlr_0.4.2_" + kernel + "_" + arch + ".tar.gz"
+      url baseurl + "/v0.4.4/" + "kuberlr_0.4.4_" + kernel + "_" + arch + ".tar.gz"
     end
+  end
 
-    @@bin = "kuberlr"
+  on_linux do
+    kernel = "linux"
+    sha256 "1755abbe141ff4adc41a3b06908ce0fdbc53419867779e121e4f3415eb0ad172"
+    arch = "amd64"
+    url baseurl + "/v0.4.4/" + "kuberlr_0.4.4_" + kernel + "_" + arch + ".tar.gz"
+  end
 
-    def install
-      bin.install @@bin
-      bin.install_symlink "kuberlr" => "kubectl"
-    end
+  @@bin = "kuberlr"
+
+  def install
+    bin.install @@bin
+    bin.install_symlink "kuberlr" => "kubectl"
+  end
 end
