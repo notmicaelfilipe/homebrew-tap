@@ -2,7 +2,7 @@
 class Kuberlr < Formula
   desc "Kuberlr - A tool that simplifies the management of multiple versions of kubectl."
   baseurl = "https://github.com/flavio/kuberlr/releases/download"
-  version "0.4.4"
+  version "0.4.5"
 
   livecheck do
     url :stable
@@ -12,23 +12,23 @@ class Kuberlr < Formula
   on_macos do
     on_arm do
       kernel = "darwin"
-      sha256 "98ea17f30a62f7759bfb64179bc06dce8a9b722fb32b8689b89cbae3a30bf634"
+      sha256 "29adf6dd4b06648944cda9dc2a3bf8d40dfbe97a0042de6a48a140c1988a391b"
       arch = "arm64"
-      url baseurl + "/v0.4.4/" + "kuberlr_0.4.4_" + kernel + "_" + arch + ".tar.gz"
+      url baseurl + "/v0.4.5/" + "kuberlr_0.4.5_" + kernel + "_" + arch + ".tar.gz"
     end
     on_intel do
       kernel = "darwin"
-      sha256 "16b5a395872d0ceae07ec6f3f88668e08fbd0fd4cf68404896c0a21fc7c0f62e"
+      sha256 "ddc8557b2b6a004413f22d8b5f8abfca3ba4c47b7f727f98e1bd8296e949fb96"
       arch = "amd64"
-      url baseurl + "/v0.4.4/" + "kuberlr_0.4.4_" + kernel + "_" + arch + ".tar.gz"
+      url baseurl + "/v0.4.5/" + "kuberlr_0.4.5_" + kernel + "_" + arch + ".tar.gz"
     end
   end
 
   on_linux do
     kernel = "linux"
-    sha256 "1755abbe141ff4adc41a3b06908ce0fdbc53419867779e121e4f3415eb0ad172"
+    sha256 "28959ff8e5add3b714a6c36c042529cfafc3f8c74660b2c56ac2ad969103b091"
     arch = "amd64"
-    url baseurl + "/v0.4.4/" + "kuberlr_0.4.4_" + kernel + "_" + arch + ".tar.gz"
+    url baseurl + "/v0.4.5/" + "kuberlr_0.4.5_" + kernel + "_" + arch + ".tar.gz"
   end
 
   @@bin = "kuberlr"
