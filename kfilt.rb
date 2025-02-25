@@ -14,13 +14,13 @@ class Kfilt < Formula
         kernel = "darwin"
         sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
         arch = "arm64"
-        url baseurl + "/0.0.8/" + "kfilt_0.0.8_" + kernel + "_" + arch
+        url baseurl + "/v0.0.8/" + "kfilt_0.0.8_" + kernel + "_" + arch
       end
       on_intel do
         kernel = "darwin"
         sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
         arch = "amd64"
-        url baseurl + "/0.0.8/" + "kfilt_0.0.8_" + kernel + "_" + arch
+        url baseurl + "/v0.0.8/" + "kfilt_0.0.8_" + kernel + "_" + arch
       end
     end
 
@@ -29,13 +29,13 @@ class Kfilt < Formula
         kernel = "linux"
         sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
         arch = "arm64"
-        url baseurl + "/0.0.8/" + "kfilt_0.0.8_" + kernel + "_" + arch
+        url baseurl + "/v0.0.8/" + "kfilt_0.0.8_" + kernel + "_" + arch
       end
       on_intel do
         kernel = "linux"
         sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
         arch = "amd64"
-        url baseurl + "/0.0.8/" + "kfilt_0.0.8_" + kernel + "_" + arch
+        url baseurl + "/v0.0.8/" + "kfilt_0.0.8_" + kernel + "_" + arch
       end
     end
 

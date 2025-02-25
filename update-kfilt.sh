@@ -8,7 +8,7 @@ if [ "$#" -lt 1 ]; then
 fi
 
 VERSION="$1"
-DWVERSION="$VERSION"
+DWVERSION="v$VERSION"
 
 URL_BASE="https://github.com/ryane/kfilt/releases"
 CLASSNAME="Kfilt"
