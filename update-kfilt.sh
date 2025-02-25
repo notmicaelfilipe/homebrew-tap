@@ -64,12 +64,14 @@ class ${CLASSNAME}${CLASS_POSTFIX} < Formula
         sha256 \"${OSX_ARM64_SHA256}\"
         arch = \"arm64\"
         url baseurl + \"/${DWVERSION}/\" + \"${CLI_NAME}_\" + kernel + \"_\" + arch
+        @@bin = \"${CLI_NAME}_\" + kernel + \"_\" + arch
       end
       on_intel do
         kernel = \"darwin\"
         sha256 \"${OSX_AMD64_SHA256}\"
         arch = \"amd64\"
         url baseurl + \"/${DWVERSION}/\" + \"${CLI_NAME}_\" + kernel + \"_\" + arch
+        @@bin = \"${CLI_NAME}_\" + kernel + \"_\" + arch
       end
     end
 
@@ -79,19 +81,20 @@ class ${CLASSNAME}${CLASS_POSTFIX} < Formula
         sha256 \"${LINUX_ARM64_SHA256}\"
         arch = \"arm64\"
         url baseurl + \"/${DWVERSION}/\" + \"${CLI_NAME}_\" + kernel + \"_\" + arch
+        @@bin = \"${CLI_NAME}_\" + kernel + \"_\" + arch
       end
       on_intel do
         kernel = \"linux\"
         sha256 \"${LINUX_AMD64_SHA256}\"
         arch = \"amd64\"
         url baseurl + \"/${DWVERSION}/\" + \"${CLI_NAME}_\" + kernel + \"_\" + arch
+        @@bin = \"${CLI_NAME}_\" + kernel + \"_\" + arch
       end
     end
 
-    @@bin = \"${CLI_NAME}_\" + kernel + \"_\" + arch
 
     def install
-      bin.install @@bin
+      bin.install @@bin => \"${NAME}\"
     end
 end"
 
