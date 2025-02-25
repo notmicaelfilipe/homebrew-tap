@@ -39,7 +39,7 @@ class Kfilt < Formula
       end
     end
 
-    @@bin = "kfilt"
+    @@bin = "kfilt_0.0.8_" + kernel + "_" + arch
 
     def install
       bin.install @@bin

@@ -88,7 +88,7 @@ class ${CLASSNAME}${CLASS_POSTFIX} < Formula
       end
     end
 
-    @@bin = \"${NAME}\"
+    @@bin = \"${CLI_NAME}_\" + kernel + \"_\" + arch
 
     def install
       bin.install @@bin
