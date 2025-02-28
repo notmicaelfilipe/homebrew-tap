@@ -62,14 +62,14 @@ class ${CLASSNAME}${CLASS_POSTFIX} < Formula
       on_arm do
         kernel = \"darwin\"
         sha256 \"${OSX_ARM64_SHA256}\"
-        arch = \"arm64\"
+        arch = \"all\"
         url baseurl + \"/${DWVERSION}/\" + \"${CLI_NAME}_\" + kernel + \"_\" + arch
         @@bin = \"${CLI_NAME}_\" + kernel + \"_\" + arch
       end
       on_intel do
         kernel = \"darwin\"
         sha256 \"${OSX_AMD64_SHA256}\"
-        arch = \"amd64\"
+        arch = \"all\"
         url baseurl + \"/${DWVERSION}/\" + \"${CLI_NAME}_\" + kernel + \"_\" + arch
         @@bin = \"${CLI_NAME}_\" + kernel + \"_\" + arch
       end

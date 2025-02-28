@@ -13,14 +13,14 @@ class Kfilt < Formula
       on_arm do
         kernel = "darwin"
         sha256 "0fc6dd9698b60a65c207a0deb960a974f14683536a705b8f91dc250414c21f4c"
-        arch = "arm64"
+        arch = "all"
         url baseurl + "/v0.0.8/" + "kfilt_0.0.8_" + kernel + "_" + arch
         @@bin = "kfilt_0.0.8_" + kernel + "_" + arch
       end
       on_intel do
         kernel = "darwin"
         sha256 "0fc6dd9698b60a65c207a0deb960a974f14683536a705b8f91dc250414c21f4c"
-        arch = "amd64"
+        arch = "all"
         url baseurl + "/v0.0.8/" + "kfilt_0.0.8_" + kernel + "_" + arch
         @@bin = "kfilt_0.0.8_" + kernel + "_" + arch
       end
