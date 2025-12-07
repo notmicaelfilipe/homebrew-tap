@@ -14,7 +14,7 @@ URL_BASE="https://github.com/ryane/kfilt/releases/download"
 CLASSNAME="Kfilt"
 DESC="kfilt is a tool that lets you filter specific resources from a stream of Kubernetes YAML manifests."
 NAME="kfilt"
-CLI_NAME="kfilt_${VERSION}"
+CLI_NAME="kfilt"
 
 # OSX
 
